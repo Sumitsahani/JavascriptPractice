@@ -17,5 +17,5 @@ function bubbleSort(arr) {
  
   const arrayToSort = [64, 34, 25, 12, 22, 11, 90];
   const sortedArray = bubbleSort(arrayToSort);
-  console.log('Sorted Array:', sortedArray);
+  console.log("Sec Largest Num :" +sortedArray[sortedArray.length-2])
    
