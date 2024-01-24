@@ -1,14 +1,22 @@
  function LongSub(Arr,num){
-    let sum=0; 
-    let count=0; 
+    
+    let len =0;
    for(let i=0; i<Arr.length; i++){
-      sum+=Arr[i];
-      if(sum==num)
+      let sum=0; 
+      for(let j=i; j<Arr.length; j++){
+         sum=sum+Arr[j]
+
+         if(sum==num){
+            len =Math.max(len, j-i+1);
+         }
+      }
+      
    }
-   console.log(sum)
+   return len
  }
 
- let Arr =[1,3,2,3]
- let num=5 
+ let Arr =[2, 3, 5, 1, 9]
+ let num=10
 
- LongSub(Arr)
+ let result=LongSub(Arr,num);
+ console.log(result)
